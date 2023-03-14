@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: "Hello Vue!",
+      disks: [],
     };
   },
 
@@ -11,7 +11,8 @@ createApp({
     axios
       .get("http://localhost/php-dischi-json/API/get-disks.php")
       .then((results) => {
-        console.log(results);
+        this.disks = results.data;
+        console.log(this.disks);
       });
   },
 }).mount("#app");

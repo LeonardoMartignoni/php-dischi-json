@@ -17,7 +17,12 @@
 </head>
 <body>
   <div id="app">
-    
+    <ul v-for="disk in disks">
+      <li>{{disk.title}}</li>
+      <li>{{disk.author}}</li>
+      <li>{{disk.year}}</li>
+      <li>{{disk.genre}}</li>
+    </ul>
   </div>
 </body>
 </html>
